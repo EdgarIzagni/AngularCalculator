@@ -1,0 +1,17 @@
+<h1 class="title">Aplicación de Calculador</h1>
+
+<form action="" class="form" method="POST">
+    <label for="opOne" class="form__label">Operador A: </label>
+    <input type="number" name="a" id="opOne" class="form__input" [(ngModel)] = "a">
+    <label for="opTwo" class="form__label">Operador B: </label>
+    <input type="number" name="b" id="opTwo" class="form__input" [(ngModel)] = "b"> 
+
+    <div class="operation">
+        <button id="s" class="op__button" (click)="onOperation($event)">Sumar</button>
+        <button id="r" class="op__button" (click)="onOperation($event)">Restar</button>
+        <button id="m" class="op__button" (click)="onOperation($event)">Multiplicar</button>
+        <button id="d" class="op__button" (click)="onOperation($event)">Dividir</button>
+    </div>
+</form>
+
+<p class="result">Resultado: {{getResult()}} </p>
